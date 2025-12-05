@@ -1,4 +1,5 @@
 import sounddevice as sd
+from scipy.io import wavfile
 from scipy.io.wavfile import write
 
 duration = 5
