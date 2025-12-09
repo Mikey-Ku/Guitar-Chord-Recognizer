@@ -2,7 +2,8 @@ import os
 import json
 import numpy as np
 from scipy.io.wavfile import read
-from dft import dft
+from dft import analyze_audio_chunk
+from chord_collector import major_chords
 
 CHORD_RECORDINGS_PATH = "chord_recordings"
 ANALYSIS_OUTPUT_PATH = "analysis"
@@ -65,26 +66,25 @@ def process_single_file(wav_path, wav_filename, output_folder):
         if len(audio_data.shape) > 1:
             audio_data = np.mean(audio_data, axis=1)
         
-        # Normalize audio to [-1, 1] range
+        # Normalize audio to [-1, 1] ranged
         audio_data = audio_data / np.max(np.abs(audio_data))
         
-        # Apply DFT
-        dft_magnitudes = dft(audio_data)
+        # Take a reasonable chunk for analysis (4096 samples = ~0.1 seconds at 44kHz)
+        max_samples = min(len(audio_data), 4096)
+        audio_chunk = audio_data[:max_samples]
         
-        # Calculate frequency axis (Hz)
-        freqs = np.fft.fftfreq(len(audio_data), 1/sample_rate)[:len(dft_magnitudes)]
-        freqs = np.abs(freqs)  # Take absolute values for positive frequencies
+        print(f"Processing {wav_filename} ({len(audio_data)} samples → {max_samples} samples)...")
         
-        # Find peak frequency
-        peak_idx = np.argmax(dft_magnitudes)
-        peak_frequency = freqs[peak_idx]
-        peak_magnitude = dft_magnitudes[peak_idx]
+        # Use the DFT module to analyze the audio chunk
+        print(f"Applying custom DFT analysis...")
+        dft_results = analyze_audio_chunk(audio_chunk, sample_rate, chunk_size=512)
         
-        # Find top 5 frequencies
-        top_indices = np.argsort(dft_magnitudes)[-5:][::-1]
-        top_frequencies = [(float(freqs[i]), float(dft_magnitudes[i])) for i in top_indices]
+        # Extract results from DFT analysis
+        peak_frequency = dft_results["peak_frequency_hz"]
+        peak_magnitude = dft_results["peak_magnitude"]
+        top_frequencies = dft_results["top_5_frequencies"]
         
-        # Prepare output data
+        # Prepare output data combining file info with DFT results
         analysis_data = {
             "filename": wav_filename,
             "sample_rate": int(sample_rate),
@@ -92,8 +92,7 @@ def process_single_file(wav_path, wav_filename, output_folder):
             "peak_frequency_hz": float(peak_frequency),
             "peak_magnitude": float(peak_magnitude),
             "top_5_frequencies": top_frequencies,
-            "dft_magnitudes": [float(m) for m in dft_magnitudes],
-            "frequencies_hz": [float(f) for f in freqs]
+            **dft_results  # Include all DFT analysis results
         }
         
         # Save as JSON
@@ -131,6 +130,8 @@ def process_all_chords(chord_list):
         print(f"✗ Failed: {failed} chords")
 
 if __name__ == "__main__":
-    # Example usage
-    chords = ["A", "B", "C"]
-    process_all_chords(chords)
+    print("Starting audio processing for all recorded chords...")
+    print(f"Will process {len(major_chords)} chords: {', '.join(major_chords)}")
+    process_all_chords(major_chords)
+    print("\nAudio processing complete!")
+    

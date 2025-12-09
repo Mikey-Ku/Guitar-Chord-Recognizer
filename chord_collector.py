@@ -2,13 +2,13 @@ import os
 from audio_recorder import audio_recorder
 
 major_chords = [
-    "A", "A#", "Bb",
-    "B", "Cb",
-    "C", "C#", "Db",
-    "D", "D#", "Eb",
+    "A", "Bb",
+    "B",
+    "C", "Db",
+    "D", "Eb",
     "E", "Fb",
-    "F", "F#", "Gb",
-    "G", "G#", "Ab"
+    "F", "Gb",
+    "G", "Ab"
 ]
 
 SAMPLES_PER_CHORD = 5

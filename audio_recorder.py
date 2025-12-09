@@ -6,7 +6,7 @@ from scipy.io.wavfile import write
 duration = 5
 sample_rate = 44100
 
-def audio_recorder(chord=None, folder=None, filename=None):
+def audio_recorder(chord=None, folder="chord_recordings", filename=None):
     """
     Records audio and saves it to a specified location.
     
@@ -15,6 +15,7 @@ def audio_recorder(chord=None, folder=None, filename=None):
         folder: The folder path where the file will be saved
         filename: Optional specific filename (if not provided, generates one)
     """
+
     if folder and not os.path.exists(folder):
         os.makedirs(folder)
     
@@ -29,3 +30,6 @@ def audio_recorder(chord=None, folder=None, filename=None):
     
     write(filepath, sample_rate, audio)
     print(f"Saved as {filepath}")
+
+if __name__ == "__main__":
+    audio_recorder()
