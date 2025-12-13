@@ -8,12 +8,13 @@ import json
 import os
 import numpy as np
 from dft import ManualDFT
+import matplotlib.pyplot as plt
 
 
 class ChordRecognizer:
     """Main chord recognizer class"""
     
-    def __init__(self, sample_rate=44100, duration=2.0):
+    def __init__(self, sample_rate=11000, duration=2.0):
         self.sample_rate = sample_rate
         self.duration = duration
         self.chord_library = {}
@@ -79,18 +80,74 @@ class ChordRecognizer:
         top_peaks = [(freq, mag) for freq, mag in top_peaks if freq > 80 and freq < 1500]
         
         return top_peaks
-    
+
+    def _compute_spectrum(self, signal_segment):
+        """Compute frequency bins (Hz) and magnitude spectrum for a signal segment"""
+        freqs_complex = self.dft.dft(signal_segment)
+        magnitudes = self.dft.get_magnitude_spectrum(freqs_complex)
+        N = len(signal_segment)
+        freq_bins_hz = [i * self.sample_rate / N for i in range(len(magnitudes))]
+        return freq_bins_hz, magnitudes
+
+    def _plot_training_spectra(self, chord_name, audio_signal):
+        """Plot two DFT magnitude spectra: downsampled spread vs contiguous 0.5s"""
+        # Prepare signals
+        target_duration = 0.5
+        target_samples = int(target_duration * self.sample_rate)
+
+        # Spread downsampling across full recording
+        downsample_factor = max(1, len(audio_signal) // target_samples)
+        spread_signal = audio_signal[::downsample_factor][:target_samples]
+
+        # Contiguous 0.5s from start
+        contiguous_signal = audio_signal[:target_samples]
+
+        # Compute spectra
+        freq_spread, mag_spread = self._compute_spectrum(spread_signal)
+        freq_contig, mag_contig = self._compute_spectrum(contiguous_signal)
+
+        # Plot
+        plt.figure(figsize=(12, 5))
+        plt.subplot(1, 2, 1)
+        plt.plot(freq_spread, mag_spread, color='tab:blue')
+        plt.title(f"{chord_name} - Downsampled (spread)")
+        plt.xlabel("Frequency (Hz)")
+        plt.ylabel("DFT Magnitude")
+        plt.xlim(0, 2000)
+
+        plt.subplot(1, 2, 2)
+        plt.plot(freq_contig, mag_contig, color='tab:orange')
+        plt.title(f"{chord_name} - Contiguous (first 0.5s)")
+        plt.xlabel("Frequency (Hz)")
+        plt.ylabel("DFT Magnitude")
+        plt.xlim(0, 2000)
+
+        plt.tight_layout()
+
+        # Ensure output directory exists
+        os.makedirs("dft_plots", exist_ok=True)
+        ts = time.strftime("%Y%m%d_%H%M%S")
+        out_path = os.path.join("dft_plots", f"{chord_name}_{ts}.png")
+        plt.savefig(out_path, dpi=150)
+        print(f"Saved DFT plots to {out_path}")
+
+        # Show the plot for immediate feedback
+        plt.show()
+
     def train_chord(self, chord_name):
         """Record and store a chord in the library"""
         audio = self.record_audio(f"Recording chord: {chord_name}")
         features = self.extract_features(audio)
-        
+
         self.chord_library[chord_name] = features
         print(f"\nChord '{chord_name}' features extracted:")
         print("Top frequencies (Hz) and magnitudes:")
         for freq, mag in features[:5]:
             print(f"  {freq:.1f} Hz: {mag:.2f}")
-        
+
+        # Plot two spectra after training
+        self._plot_training_spectra(chord_name, audio)
+
         self.save_library()
     
     def compare_features(self, features1, features2):
