@@ -1,0 +1,875 @@
+[
+  {
+    "song": "Riptide",
+    "artist": "Vance Joy",
+    "chords": [
+      "Am",
+      "G",
+      "C",
+      "F"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Riptide+Vance+Joy"
+  },
+  {
+    "song": "Let It Be",
+    "artist": "The Beatles",
+    "chords": [
+      "C",
+      "G",
+      "Am",
+      "F"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Let+It+Be+The+Beatles"
+  },
+  {
+    "song": "I'm Yours",
+    "artist": "Jason Mraz",
+    "chords": [
+      "C",
+      "G",
+      "Am",
+      "F"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=I'm+Yours+Jason+Mraz"
+  },
+  {
+    "song": "Wonderwall",
+    "artist": "Oasis",
+    "chords": [
+      "Em",
+      "G",
+      "D",
+      "A",
+      "C"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Wonderwall+Oasis"
+  },
+  {
+    "song": "Perfect",
+    "artist": "Ed Sheeran",
+    "chords": [
+      "G",
+      "Em",
+      "C",
+      "D"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Perfect+Ed+Sheeran"
+  },
+  {
+    "song": "Photograph",
+    "artist": "Ed Sheeran",
+    "chords": [
+      "E",
+      "B",
+      "C#m",
+      "A"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Photograph+Ed+Sheeran"
+  },
+  {
+    "song": "Thinking Out Loud",
+    "artist": "Ed Sheeran",
+    "chords": [
+      "D",
+      "D/F#",
+      "G",
+      "A",
+      "Bm"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Thinking+Out+Loud+Ed+Sheeran"
+  },
+  {
+    "song": "Shape of You",
+    "artist": "Ed Sheeran",
+    "chords": [
+      "C#m",
+      "F#m",
+      "A",
+      "E"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Shape+of+You+Ed+Sheeran"
+  },
+  {
+    "song": "Someone Like You",
+    "artist": "Adele",
+    "chords": [
+      "A",
+      "E",
+      "F#m",
+      "D"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Someone+Like+You+Adele"
+  },
+  {
+    "song": "Rolling in the Deep",
+    "artist": "Adele",
+    "chords": [
+      "C",
+      "G",
+      "Bb",
+      "Fm"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Rolling+in+the+Deep+Adele"
+  },
+  {
+    "song": "Hello",
+    "artist": "Adele",
+    "chords": [
+      "Fm",
+      "Ab",
+      "Eb",
+      "Db"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Hello+Adele"
+  },
+  {
+    "song": "Shallow",
+    "artist": "Lady Gaga & Bradley Cooper",
+    "chords": [
+      "Em",
+      "D",
+      "G",
+      "C"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Shallow+Lady+Gaga+and+Bradley+Cooper"
+  },
+  {
+    "song": "All of Me",
+    "artist": "John Legend",
+    "chords": [
+      "Em",
+      "C",
+      "G",
+      "D"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=All+of+Me+John+Legend"
+  },
+  {
+    "song": "Stay With Me",
+    "artist": "Sam Smith",
+    "chords": [
+      "Am",
+      "F",
+      "C",
+      "G"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Stay+With+Me+Sam+Smith"
+  },
+  {
+    "song": "Believer",
+    "artist": "Imagine Dragons",
+    "chords": [
+      "Bm",
+      "G",
+      "D",
+      "A"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Believer+Imagine+Dragons"
+  },
+  {
+    "song": "Radioactive",
+    "artist": "Imagine Dragons",
+    "chords": [
+      "Bm",
+      "D",
+      "A",
+      "E"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Radioactive+Imagine+Dragons"
+  },
+  {
+    "song": "Demons",
+    "artist": "Imagine Dragons",
+    "chords": [
+      "C",
+      "G",
+      "Am",
+      "F"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Demons+Imagine+Dragons"
+  },
+  {
+    "song": "Viva La Vida",
+    "artist": "Coldplay",
+    "chords": [
+      "C",
+      "D",
+      "G",
+      "Em"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Viva+La+Vida+Coldplay"
+  },
+  {
+    "song": "Yellow",
+    "artist": "Coldplay",
+    "chords": [
+      "B",
+      "F#",
+      "E"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Yellow+Coldplay"
+  },
+  {
+    "song": "Fix You",
+    "artist": "Coldplay",
+    "chords": [
+      "C",
+      "Em",
+      "Am",
+      "G",
+      "F"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Fix+You+Coldplay"
+  },
+  {
+    "song": "Clocks",
+    "artist": "Coldplay",
+    "chords": [
+      "Eb",
+      "Bb",
+      "Fm"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Clocks+Coldplay"
+  },
+  {
+    "song": "The Scientist",
+    "artist": "Coldplay",
+    "chords": [
+      "Dm",
+      "Bb",
+      "F",
+      "C"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=The+Scientist+Coldplay"
+  },
+  {
+    "song": "Time of Your Life",
+    "artist": "Green Day",
+    "chords": [
+      "G",
+      "C",
+      "D",
+      "Em"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Time+of+Your+Life+Green+Day"
+  },
+  {
+    "song": "Boulevard of Broken Dreams",
+    "artist": "Green Day",
+    "chords": [
+      "Em",
+      "G",
+      "D",
+      "A",
+      "C"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Boulevard+of+Broken+Dreams+Green+Day"
+  },
+  {
+    "song": "Wake Me Up When September Ends",
+    "artist": "Green Day",
+    "chords": [
+      "G",
+      "C",
+      "Em",
+      "D"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Wake+Me+Up+When+September+Ends+Green+Day"
+  },
+  {
+    "song": "Hey There Delilah",
+    "artist": "Plain White T's",
+    "chords": [
+      "D",
+      "F#m",
+      "Bm",
+      "G",
+      "A"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Hey+There+Delilah+Plain+White+T's"
+  },
+  {
+    "song": "Horse with No Name",
+    "artist": "America",
+    "chords": [
+      "Em",
+      "D6add9/F#"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Horse+with+No+Name+America"
+  },
+  {
+    "song": "Hotel California",
+    "artist": "Eagles",
+    "chords": [
+      "Bm",
+      "F#",
+      "A",
+      "E",
+      "G",
+      "D",
+      "Em"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Hotel+California+Eagles"
+  },
+  {
+    "song": "Take It Easy",
+    "artist": "Eagles",
+    "chords": [
+      "G",
+      "D",
+      "C",
+      "Em",
+      "Am"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Take+It+Easy+Eagles"
+  },
+  {
+    "song": "Free Fallin'",
+    "artist": "Tom Petty",
+    "chords": [
+      "D",
+      "G",
+      "A"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Free+Fallin'+Tom+Petty"
+  },
+  {
+    "song": "Wonder",
+    "artist": "Shawn Mendes",
+    "chords": [
+      "Em",
+      "C",
+      "G",
+      "D"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Wonder+Shawn+Mendes"
+  },
+  {
+    "song": "Stitches",
+    "artist": "Shawn Mendes",
+    "chords": [
+      "Am",
+      "F",
+      "C",
+      "G"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Stitches+Shawn+Mendes"
+  },
+  {
+    "song": "Treat You Better",
+    "artist": "Shawn Mendes",
+    "chords": [
+      "Am",
+      "F",
+      "C",
+      "G"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Treat+You+Better+Shawn+Mendes"
+  },
+  {
+    "song": "Don't Look Back in Anger",
+    "artist": "Oasis",
+    "chords": [
+      "C",
+      "G",
+      "Am",
+      "E",
+      "F"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Don't+Look+Back+in+Anger+Oasis"
+  },
+  {
+    "song": "Champagne Supernova",
+    "artist": "Oasis",
+    "chords": [
+      "A",
+      "G",
+      "D",
+      "Em"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Champagne+Supernova+Oasis"
+  },
+  {
+    "song": "Wonder",
+    "artist": "Natalie Merchant",
+    "chords": [
+      "G",
+      "C",
+      "D",
+      "Em"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Wonder+Natalie+Merchant"
+  },
+  {
+    "song": "Africa",
+    "artist": "Toto",
+    "chords": [
+      "Bm",
+      "G",
+      "D",
+      "A"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Africa+Toto"
+  },
+  {
+    "song": "Sweet Child O' Mine",
+    "artist": "Guns N' Roses",
+    "chords": [
+      "D",
+      "C",
+      "G"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Sweet+Child+O'+Mine+Guns+N'+Roses"
+  },
+  {
+    "song": "Knockin' on Heaven's Door",
+    "artist": "Bob Dylan",
+    "chords": [
+      "G",
+      "D",
+      "Am",
+      "C"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Knockin'+on+Heaven's+Door+Bob+Dylan"
+  },
+  {
+    "song": "Blowin' in the Wind",
+    "artist": "Bob Dylan",
+    "chords": [
+      "G",
+      "C",
+      "D"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Blowin'+in+the+Wind+Bob+Dylan"
+  },
+  {
+    "song": "All Along the Watchtower",
+    "artist": "Bob Dylan",
+    "chords": [
+      "Am",
+      "G",
+      "F"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=All+Along+the+Watchtower+Bob+Dylan"
+  },
+  {
+    "song": "Stand By Me",
+    "artist": "Ben E. King",
+    "chords": [
+      "A",
+      "F#m",
+      "D",
+      "E"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Stand+By+Me+Ben+E.+King"
+  },
+  {
+    "song": "Hallelujah",
+    "artist": "Leonard Cohen",
+    "chords": [
+      "C",
+      "Am",
+      "F",
+      "G",
+      "Em"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Hallelujah+Leonard+Cohen"
+  },
+  {
+    "song": "Creep",
+    "artist": "Radiohead",
+    "chords": [
+      "G",
+      "B",
+      "C",
+      "Cm"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Creep+Radiohead"
+  },
+  {
+    "song": "High and Dry",
+    "artist": "Radiohead",
+    "chords": [
+      "D",
+      "B",
+      "G",
+      "Em",
+      "A"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=High+and+Dry+Radiohead"
+  },
+  {
+    "song": "Fake Plastic Trees",
+    "artist": "Radiohead",
+    "chords": [
+      "A",
+      "E",
+      "F#m",
+      "D"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Fake+Plastic+Trees+Radiohead"
+  },
+  {
+    "song": "Smells Like Teen Spirit",
+    "artist": "Nirvana",
+    "chords": [
+      "F",
+      "Bb",
+      "Ab",
+      "Db"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Smells+Like+Teen+Spirit+Nirvana"
+  },
+  {
+    "song": "Come As You Are",
+    "artist": "Nirvana",
+    "chords": [
+      "Em",
+      "G",
+      "D",
+      "A",
+      "C"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Come+As+You+Are+Nirvana"
+  },
+  {
+    "song": "About a Girl",
+    "artist": "Nirvana",
+    "chords": [
+      "Em",
+      "G"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=About+a+Girl+Nirvana"
+  },
+  {
+    "song": "Losing My Religion",
+    "artist": "R.E.M.",
+    "chords": [
+      "Em",
+      "Am",
+      "D",
+      "G",
+      "C"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Losing+My+Religion+R.E.M."
+  },
+  {
+    "song": "Everybody Hurts",
+    "artist": "R.E.M.",
+    "chords": [
+      "D",
+      "G",
+      "Em",
+      "A"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Everybody+Hurts+R.E.M."
+  },
+  {
+    "song": "Wish You Were Here",
+    "artist": "Pink Floyd",
+    "chords": [
+      "G",
+      "C",
+      "D",
+      "Am",
+      "Em"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Wish+You+Were+Here+Pink+Floyd"
+  },
+  {
+    "song": "Hey Jude",
+    "artist": "The Beatles",
+    "chords": [
+      "C",
+      "G",
+      "Am",
+      "F"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Hey+Jude+The+Beatles"
+  },
+  {
+    "song": "Yesterday",
+    "artist": "The Beatles",
+    "chords": [
+      "F",
+      "Em7",
+      "A7",
+      "Dm",
+      "Bb",
+      "C"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Yesterday+The+Beatles"
+  },
+  {
+    "song": "Blackbird",
+    "artist": "The Beatles",
+    "chords": [
+      "G",
+      "Am7",
+      "G/B",
+      "C"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Blackbird+The+Beatles"
+  },
+  {
+    "song": "Here Comes the Sun",
+    "artist": "The Beatles",
+    "chords": [
+      "D",
+      "G",
+      "A",
+      "E7"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Here+Comes+the+Sun+The+Beatles"
+  },
+  {
+    "song": "Imagine",
+    "artist": "John Lennon",
+    "chords": [
+      "C",
+      "F",
+      "G",
+      "Am",
+      "Dm"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Imagine+John+Lennon"
+  },
+  {
+    "song": "Piano Man",
+    "artist": "Billy Joel",
+    "chords": [
+      "C",
+      "G",
+      "F",
+      "Am",
+      "Dm"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Piano+Man+Billy+Joel"
+  },
+  {
+    "song": "Uptown Girl",
+    "artist": "Billy Joel",
+    "chords": [
+      "C",
+      "Am",
+      "F",
+      "G"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Uptown+Girl+Billy+Joel"
+  },
+  {
+    "song": "Brown Eyed Girl",
+    "artist": "Van Morrison",
+    "chords": [
+      "G",
+      "C",
+      "D",
+      "Em"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Brown+Eyed+Girl+Van+Morrison"
+  },
+  {
+    "song": "Sweet Home Alabama",
+    "artist": "Lynyrd Skynyrd",
+    "chords": [
+      "D",
+      "C",
+      "G"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Sweet+Home+Alabama+Lynyrd+Skynyrd"
+  },
+  {
+    "song": "Simple Man",
+    "artist": "Lynyrd Skynyrd",
+    "chords": [
+      "C",
+      "G",
+      "Am"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Simple+Man+Lynyrd+Skynyrd"
+  },
+  {
+    "song": "Take Me Home, Country Roads",
+    "artist": "John Denver",
+    "chords": [
+      "G",
+      "Em",
+      "D",
+      "C"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Take+Me+Home,+Country+Roads+John+Denver"
+  },
+  {
+    "song": "Jolene",
+    "artist": "Dolly Parton",
+    "chords": [
+      "Am",
+      "C",
+      "G",
+      "Em"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Jolene+Dolly+Parton"
+  },
+  {
+    "song": "Ring of Fire",
+    "artist": "Johnny Cash",
+    "chords": [
+      "G",
+      "C",
+      "D"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Ring+of+Fire+Johnny+Cash"
+  },
+  {
+    "song": "Folsom Prison Blues",
+    "artist": "Johnny Cash",
+    "chords": [
+      "E",
+      "A",
+      "B7"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Folsom+Prison+Blues+Johnny+Cash"
+  },
+  {
+    "song": "Hurt",
+    "artist": "Johnny Cash",
+    "chords": [
+      "Am",
+      "C",
+      "D",
+      "G",
+      "F"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Hurt+Johnny+Cash"
+  },
+  {
+    "song": "Zombie",
+    "artist": "The Cranberries",
+    "chords": [
+      "Em",
+      "C",
+      "G",
+      "D"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Zombie+The+Cranberries"
+  },
+  {
+    "song": "Dreams",
+    "artist": "The Cranberries",
+    "chords": [
+      "D",
+      "G",
+      "Em",
+      "A"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Dreams+The+Cranberries"
+  },
+  {
+    "song": "Mr. Brightside",
+    "artist": "The Killers",
+    "chords": [
+      "C",
+      "G",
+      "F",
+      "Am"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Mr.+Brightside+The+Killers"
+  },
+  {
+    "song": "Use Somebody",
+    "artist": "Kings of Leon",
+    "chords": [
+      "C",
+      "F",
+      "Am",
+      "G"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Use+Somebody+Kings+of+Leon"
+  },
+  {
+    "song": "Sex on Fire",
+    "artist": "Kings of Leon",
+    "chords": [
+      "E",
+      "A",
+      "C#m",
+      "B"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Sex+on+Fire+Kings+of+Leon"
+  },
+  {
+    "song": "Chasing Cars",
+    "artist": "Snow Patrol",
+    "chords": [
+      "A",
+      "E",
+      "D"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Chasing+Cars+Snow+Patrol"
+  },
+  {
+    "song": "Run",
+    "artist": "Snow Patrol",
+    "chords": [
+      "G",
+      "C",
+      "Em",
+      "D"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Run+Snow+Patrol"
+  },
+  {
+    "song": "Ho Hey",
+    "artist": "The Lumineers",
+    "chords": [
+      "C",
+      "F",
+      "Am",
+      "G"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Ho+Hey+The+Lumineers"
+  },
+  {
+    "song": "Ophelia",
+    "artist": "The Lumineers",
+    "chords": [
+      "F",
+      "Am",
+      "Bb",
+      "C"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Ophelia+The+Lumineers"
+  },
+  {
+    "song": "No Woman No Cry",
+    "artist": "Bob Marley",
+    "chords": [
+      "C",
+      "G",
+      "Am",
+      "F"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=No+Woman+No+Cry+Bob+Marley"
+  },
+  {
+    "song": "Three Little Birds",
+    "artist": "Bob Marley",
+    "chords": [
+      "A",
+      "D",
+      "E"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Three+Little+Birds+Bob+Marley"
+  },
+  {
+    "song": "Redemption Song",
+    "artist": "Bob Marley",
+    "chords": [
+      "G",
+      "Em",
+      "C",
+      "D"
+    ],
+    "youtube": "https://www.youtube.com/results?search_query=Redemption+Song+Bob+Marley"
+  }
+]
