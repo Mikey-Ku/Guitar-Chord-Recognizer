@@ -1,13 +1,12 @@
 """
-Chord recognition system using manual DFT
+Chord recognition system using manual DFT with terminal interface
 """
 
 import time
 import sounddevice as sd
 import json
 import os
-import tkinter as tk
-from tkinter import messagebox, scrolledtext
+import numpy as np
 from dft import ManualDFT
 
 
@@ -177,38 +176,30 @@ class ChordRecognizer:
                 print(f"  - {chord_name}")
     
     def detect_chord_sequence(self):
-        """Interactive GUI for recording and detecting multiple chords"""
+        """Record and detect multiple chords from terminal"""
         if not self.chord_library:
             print("\nNo chords in library! Please train some chords first.")
             return
         
         detected_chords = []
         
-        # Create GUI window
-        window = tk.Tk()
-        window.title("Chord Sequence Detector")
-        window.geometry("600x500")
+        print("\n" + "=" * 70)
+        print("CHORD SEQUENCE DETECTOR")
+        print("=" * 70)
+        print("Instructions: Record chords one at a time.")
+        print("Press 'd' to detect, 's' to save and exit, or 'q' to quit without saving.")
+        print("=" * 70)
         
-        # Results display
-        results_label = tk.Label(window, text="Detected Chords:", font=("Arial", 14, "bold"))
-        results_label.pack(pady=10)
-        
-        results_text = scrolledtext.ScrolledText(window, height=15, width=60, font=("Arial", 12))
-        results_text.pack(pady=10)
-        
-        status_label = tk.Label(window, text="Ready to record", font=("Arial", 11))
-        status_label.pack(pady=5)
-        
-        def record_and_detect():
-            """Record a chord and detect it"""
-            status_label.config(text="Recording...", fg="red")
-            window.update()
+        while True:
+            print(f"\nDetected so far: {len(detected_chords)} chords")
+            if detected_chords:
+                print(f"Chords: {', '.join(detected_chords)}")
             
-            try:
-                # Record audio
-                audio = self.record_audio_silent()
-                
-                # Extract features
+            choice = input("\nOptions: (d)etect chord, (s)ave and exit, (q)uit: ").strip().lower()
+            
+            if choice == 'd':
+                print("\nRecording chord...")
+                audio = self.record_audio("Recording...")
                 features = self.extract_features(audio)
                 
                 # Find best match
@@ -223,84 +214,41 @@ class ChordRecognizer:
                 
                 if best_score > 0.3 and best_match:
                     detected_chords.append(best_match)
-                    results_text.insert(tk.END, f"{len(detected_chords)}. {best_match} ({best_score:.1%} confidence)\n")
-                    results_text.see(tk.END)
-                    status_label.config(text=f"Detected: {best_match} - Ready for next chord", fg="green")
+                    print(f"✓ Detected: {best_match} ({best_score:.1%} confidence)")
                 else:
-                    status_label.config(text="No match found - Try again", fg="orange")
+                    print(f"✗ No confident match found (best score: {best_score:.1%})")
+            
+            elif choice == 's':
+                if detected_chords:
+                    # Remove duplicates while preserving order
+                    unique_chords = []
+                    seen = set()
+                    for chord in detected_chords:
+                        if chord not in seen:
+                            unique_chords.append(chord)
+                            seen.add(chord)
                     
-            except Exception as e:
-                status_label.config(text=f"Error: {str(e)}", fg="red")
+                    # Save to JSON
+                    sequence_data = {
+                        "total_recorded": len(detected_chords),
+                        "unique_chords": unique_chords,
+                        "all_chords": detected_chords,
+                        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+                    }
+                    
+                    filename = "chord_sequence.json"
+                    with open(filename, 'w') as f:
+                        json.dump(sequence_data, f, indent=2)
+                    
+                    print(f"\n✓ Saved {len(detected_chords)} chords ({len(unique_chords)} unique) to {filename}")
+                    print(f"Unique chords: {', '.join(unique_chords)}")
+                else:
+                    print("\nNo chords detected to save.")
+                break
             
-            window.update()
-        
-        def save_and_close():
-            """Save detected chords and close window"""
-            if detected_chords:
-                # Remove duplicates while preserving order
-                unique_chords = []
-                seen = set()
-                for chord in detected_chords:
-                    if chord not in seen:
-                        unique_chords.append(chord)
-                        seen.add(chord)
-                
-                # Save to JSON
-                sequence_data = {
-                    "total_recorded": len(detected_chords),
-                    "unique_chords": unique_chords,
-                    "all_chords": detected_chords,
-                    "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
-                }
-                
-                filename = "chord_sequence.json"
-                with open(filename, 'w') as f:
-                    json.dump(sequence_data, f, indent=2)
-                
-                messagebox.showinfo("Saved!", 
-                    f"Saved {len(detected_chords)} chords ({len(unique_chords)} unique)\n"
-                    f"File: {filename}\n"
-                    f"Unique chords: {', '.join(unique_chords)}")
+            elif choice == 'q':
+                print("\nExiting without saving...")
+                break
             
-            window.destroy()
-        
-        # Buttons
-        button_frame = tk.Frame(window)
-        button_frame.pack(pady=10)
-        
-        record_btn = tk.Button(button_frame, text="Record Chord", 
-                               command=record_and_detect,
-                               font=("Arial", 12, "bold"),
-                               bg="#4CAF50", fg="white",
-                               width=15, height=2)
-        record_btn.pack(side=tk.LEFT, padx=10)
-        
-        save_btn = tk.Button(button_frame, text="Save & Close",
-                            command=save_and_close,
-                            font=("Arial", 12, "bold"),
-                            bg="#2196F3", fg="white",
-                            width=15, height=2)
-        save_btn.pack(side=tk.LEFT, padx=10)
-        
-        # Instructions
-        instructions = tk.Label(window, 
-                               text="Click 'Record Chord' to detect each chord.\n"
-                                    "Record as many as you want, then click 'Save & Close'.",
-                               font=("Arial", 10), fg="gray")
-        instructions.pack(pady=10)
-        
-        window.mainloop()
-    
-    def record_audio_silent(self):
-        """Record audio without printing messages (for GUI)"""
-        time.sleep(0.5)  # Short pause
-        
-        audio = sd.rec(
-            int(self.duration * self.sample_rate),
-            samplerate=self.sample_rate,
-            channels=1,
-            dtype='float32'
-        )
-        sd.wait()
-        
-        return audio.flatten()
+            else:
+                print("Invalid choice. Please try again.")
